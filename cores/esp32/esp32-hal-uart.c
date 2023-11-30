@@ -775,7 +775,7 @@ int log_printfv(const char *format, va_list arg)
     }
 #endif
 */
-#if CONFIG_IDF_TARGET_ESP32C3
+#if CONFIG_IDF_TARGET_ESP32C3 || CONFIG_IDF_TARGET_ESP32S3
     vsnprintf(temp, len+1, format, arg);
     ets_printf("%s", temp);
 #else
